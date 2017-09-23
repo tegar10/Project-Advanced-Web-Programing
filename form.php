@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['submit'])){
 
-	$name = array("alexwawo", "maria", "johndoe", "janedoe", "nathan");
+	$name = array("asep", "telkomsel", "naruto", "sasuke", "pointblank");
 
 	$minimum = 5;
 	$maximum = 10;
