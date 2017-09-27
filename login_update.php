@@ -1,3 +1,5 @@
+<?php include "db.php"; ?>
+<?php include "functions.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +20,20 @@
 				<label for="password">Password</label>
 				<input type="password" name="password" class="form-control" />
 			</div>
+			<div class="form-group">
+				<select name="id" class="form-control">
+					<?php
+					showAllUserId();
+					?>
+				</select>
+			</div>
 			<div class="form_group">
-				<select name="id" class="form_control">
-					<option value="1">1</option>
+				<?php
+				while($row = mysqli_fetch_assoc($result)){
+				$id = $row['id'];
+				echo "<option value='$id'>$id</option>";
+			}
+			?>
 				</select>
 			</div>
 			<input type="submit" name="submit" value="UPDATE" class="btn btn-primary" />
