@@ -16,7 +16,6 @@
 <div id="sidebar">
 	<a href="template.php?page=mahasiswa">Mahasiswa</a>
 	<a href="template.php?page=dosen">Dosen</a>
-	<a href="template.php?page=matakuliah">Mata Kuliah</a>
 </div>
 
 <div id="konten">Ini adalah Konten
@@ -25,8 +24,7 @@
 
 </div>
 
-<div id="footer">&copy; 2017 Kalbis Institute | All Rights Reserved
-</div>
+<div id="footer">&copy; 2017 Kalbis Institute | All Rights Reserved </div>
 
 </body>
 </html>
