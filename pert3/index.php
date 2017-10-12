@@ -1,5 +1,9 @@
 <?php // filename: index.php
-
+include("koneksi.php");
+$query = "SELECT * FROM kontak
+		  INNER JOIN kategori
+		  ON kontak.kategori_id = kategori.id"
+$hasil = mysqli_query($db, $query);
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +21,10 @@
 </div>
 <div id="filter">
 	<b>Filter berdasarkan kategori: </b>
+	<?php
+	$q2 = "SELECT * FROM kategori";
+	$h2 = mysqli_query_assoc
+	?>
 	<form action="" method="post">
 		<select name="">
 			<option value=""></option>
@@ -46,6 +54,11 @@
 			</tr>
 		</thead>
 		<tbody>
+		<?php
+		$i=0;
+		while($row = mysqli_fetch_assoc($hasil)){
+			$i++;
+			?>
 			<tr>
 				<td></td>
 				<td></td>
@@ -57,6 +70,9 @@
 					<a href="">Delete</a>
 				</td>
 			</tr>
+			<?php
+	}
+	?>
 		</tbody>
 	</table>
 </div>

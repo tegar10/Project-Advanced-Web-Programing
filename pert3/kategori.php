@@ -1,5 +1,13 @@
-<?php // filename: index.php
-
+<?php // filename: kategori.php
+//1. Koneksi
+include("koneksi.php");
+$id = $_GET['id'];
+//2. Query
+$query = "SELECT * FROM kategori;
+		  WHERE id=$id";
+$hasil = mysqli_query($db, $query);
+//3. Hasil
+$row = mysqli_fetch_assoc($hasil);
 ?>
 
 <!DOCTYPE html>
@@ -27,15 +35,24 @@
 			</tr>
 		</thead>
 		<tbody>
+			<?php
+			$i = 0;
+			while($row = mysqli_fetch_assoc($hasil)){
+				$i++;
+				?>
+			}
 			<tr>
-				<td></td>
-				<td></td>
+				<td><?php echo $i; ?></td>
+				<td><?php echo $row['keterangan']; ?></td>
 				<td>
 					<a href="">View Kontak</a> | 
-					<a href="">Edit</a> | 
+					<a href="form_edit_kategori.php?id=<?php echo$row"
 					<a href="">Delete</a>
 				</td>
 			</tr>
+			<?php
+			}
+			?>
 		</tbody>
 	</table>
 </div>
