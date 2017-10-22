@@ -46,7 +46,7 @@ $row = mysqli_fetch_assoc($hasil);
 				<td><?php echo $row['keterangan']; ?></td>
 				<td>
 					<a href="">View Kontak</a> | 
-					<a href="form_edit_kategori.php?id=<?php echo$row"
+					<a href="form_edit_kategori.php?id=<?php $row['id'];?>">Edit</a>
 					<a href="">Delete</a>
 				</td>
 			</tr>

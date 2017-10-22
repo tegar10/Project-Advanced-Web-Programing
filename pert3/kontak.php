@@ -23,7 +23,7 @@ $hasil = mysqli_query($db, $query);
 </div>
 <div id="konten">
 	<h2>Kategori</h2>
-	<a href="form_tambah_kontak.php">Tambah Kategori</a>
+	<a href="form_tambah_kategori.php">Tambah Kategori</a>
 	<table border="1">
 		<thead>
 			<tr>

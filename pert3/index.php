@@ -66,7 +66,7 @@ $hasil = mysqli_query($db, $query);
 				<td></td>
 				<td></td>
 				<td>
-					<a href="">Edit</a> | 
+					<a href="">Edit</a>
 					<a href="">Delete</a>
 				</td>
 			</tr>
